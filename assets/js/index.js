@@ -115,7 +115,7 @@ $(function () {
     const total = document.querySelector(".cart-total").textContent;
     const message = `¡Hola! Me gustaría hacer un pedido con los siguientes items: ${[...items].map(item => item.textContent.replace('Eliminar', '')).join(", ")}. Total: ${total}. Nombre: ${name}. Dirección: ${address}. Email: ${email}. Teléfono: ${phone}.`;
     const link = document.getElementById("encarga_aqui");
-    link.href = `https://api.whatsapp.com/send?phone=+56990225910&text=${encodeURIComponent(message)}`;
+    link.href = `https://api.whatsapp.com/send?phone=+56950871630&text=${encodeURIComponent(message)}`;
   }
   
   document.querySelector('#encarga_aqui');
@@ -140,7 +140,7 @@ $(function () {
   message += `\nTotal: ${cartTotal}`;
   
   
-  const phoneNumber = '+56990225910'; // Cambia este número al número al que deseas enviar el mensaje
+  const phoneNumber = '+56950871630'; // Cambia este número al número al que deseas enviar el mensaje
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   window.open(whatsappLink);
   });
@@ -209,10 +209,16 @@ $(function () {
 
     const message = `¡Hola! Me gustaría hacer un pedido con los siguientes items: ${[...items].map(item => item.textContent.replace('Eliminar', '')).join(", ")}. Total: ${total}. Nombre: ${name}. Dirección: ${address}. Email: ${email}. Teléfono: ${phone}.`;
     const link = document.getElementById("encarga_aqui");
-    link.href = `https://api.whatsapp.com/send?phone=+56990225910&text=${encodeURIComponent(message)}`;
+    link.href = `https://api.whatsapp.com/send?phone=+56950871630&text=${encodeURIComponent(message)}`;
     window.open(whatsappURL);
   }
   
+
+
+
+
+  
+
 
 
 
