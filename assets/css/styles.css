@@ -308,15 +308,38 @@ header h1 {
   background-color: pink
 }
 
-.color-circle.cian{
+.color-circle.cian {
   background-color: lightblue;
 }
 
-.color-circle.crema{
-  background-color: rgb(230, 208, 172)
+.color-circle.blanco {
+  border-color: #000;
+  background-color: whitesmoke
 }
+
+.color-circle.cafe {
+  background-color: brown
+}
+
+.color-circle.gris {
+  background-color: grey
+}
+
+.color-circle.morado {
+  background-color: mediumorchid
+}
+.color-circle.multicolor{
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
 
 .color-circle:checked {
   border-color: #000;
 }
+
 
