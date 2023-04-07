@@ -184,14 +184,6 @@ $(function () {
   });
 
   
-
-
-
-
-
-
-
-  
   function enviarPedido() {
     var name = document.getElementById("name").value;
     var address = document.getElementById("address").value;
