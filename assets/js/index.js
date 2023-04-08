@@ -104,7 +104,7 @@ $(function () {
   const total = cart.reduce((accumulator, item) => accumulator + item.price * item.quantity, 0);
   
   const cartTotal = document.querySelector('.cart-total');
-  cartTotal.textContent = `$${total}`; 
+  cartTotal.textContent = `${total}`; 
   
   function enviarPedido() {
     var name = document.getElementById("name").value;
@@ -192,20 +192,17 @@ $(function () {
     const items = document.querySelectorAll(".cart-items li");
     const total = document.querySelector(".cart-total").textContent;
 
- // Construir la URL de pago con los datos del pedido
- const urlPago = `https://www.webpay.cl/form-pay/84777?utm_source=transbank&utm_medium=portal3.0&utm_campaign=link_portal&nombre=${name}&direccion=${address}&email=${email}&telefono=${phone}&item=${items}&total=${total}`;
+    // Construir la URL de pago con los datos del pedido
+    const urlPago = `https://www.webpay.cl/form-pay/84777?utm_source=transbank&utm_medium=portal3.0&utm_campaign=link_portal&nombre=${name}&direccion=${address}&email=${email}&telefono=${phone}&item=${items}&total=${total}`;
 
     // Abrir la URL de pago en una nueva ventana
     //window.open(urlPago); activar esto para el boton webpay
 
-
     const message = `¡Hola! Me gustaría hacer un pedido con los siguientes items: ${[...items].map(item => item.textContent.replace('Eliminar', '')).join(", ")}. Total: ${total}. Nombre: ${name}. Dirección: ${address}. Email: ${email}. Teléfono: ${phone}.`;
     const link = document.getElementById("encarga_aqui");
     link.href = `https://api.whatsapp.com/send?phone=+56950871630&text=${encodeURIComponent(message)}`;
-    window.open(whatsappURL);
-  }
-  
-
+    window.open(link.href);
+}
 
 
 
